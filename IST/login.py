@@ -131,7 +131,7 @@ p, ol, ul, dl {
         .st-emotion-cache-bm2z3a {
         width: 100%;
         overflow: auto;
-        background-image: linear-gradient(to right top, #051937, #004d7a, #008793, #00bf72, #a8eb12);
+        background-image: linear-gradient(to left bottom, #010002, #201d2b, #303753, #375480, #2874ae);
       }  
         </style>
     """, unsafe_allow_html=True)
