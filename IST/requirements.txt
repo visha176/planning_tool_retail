@@ -1,7 +1,6 @@
-streamlit 
-streamlit_option_menu 
+streamlit
+streamlit_option_menu
 plotly.express
 pandas
 numpy
 datetime
-BytesIO
