@@ -164,7 +164,7 @@ def main():
     st.title('Regional🌏')
 
     # Provide the sample file for download
-    st.markdown("### Download Sample File")
+    
     sample_file = create_sample_file()
     st.download_button(
         label="Download Sample Excel File",
