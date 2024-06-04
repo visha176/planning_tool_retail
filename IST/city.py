@@ -4,6 +4,25 @@ import numpy as np
 from datetime import datetime
 from io import BytesIO
 
+# Function to create a sample Excel file
+def create_sample_file():
+    sample_data = {
+        'City': ['CityA', 'CityB'],
+        'STORE_NAME': ['Store1', 'Store2'],
+        '1st Rcv Date': [datetime(2023, 1, 1), datetime(2023, 2, 1)],
+        'DESIGN': ['Design1', 'Design2'],
+        'Shop Rcv Qty': [100, 150],
+        'Disp. Qty': [10, 20],
+        'O.H Qty': [90, 130],
+        'Sold Qty': [50, 80]
+    }
+    df = pd.DataFrame(sample_data)
+    output = BytesIO()
+    with pd.ExcelWriter(output, engine='xlsxwriter') as writer:
+        df.to_excel(writer, index=False, sheet_name='Sheet1')
+    processed_data = output.getvalue()
+    return processed_data
+
 def load_data(file):
     df = pd.read_excel(file)
     df.columns = df.columns.str.strip()  # Strip any leading/trailing whitespace from column names
@@ -132,18 +151,24 @@ def process_transfer_details(filtered_df):
     transfer_df = pd.DataFrame(transfer_details)
     return transfer_df
 
-
-
-
 def to_excel(df):
     output = BytesIO()
     with pd.ExcelWriter(output, engine='xlsxwriter') as writer:
         df.to_excel(writer, index=False, sheet_name='Sheet1')
     processed_data = output.getvalue()
     return processed_data
+
 def main():
     st.title('City🌇')
-    
+
+    # Provide a download button for the sample file
+    sample_file = create_sample_file()
+    st.download_button(
+        label="Download Sample File",
+        data=sample_file,
+        file_name="sample_file.xlsx",
+        mime="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
+    )
     
     uploaded_file = st.file_uploader("Upload your Excel file", type=['xlsx'])
     
