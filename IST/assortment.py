@@ -88,7 +88,7 @@ def main():
     st.title('Assortment✍')
     
     # Provide the sample file for download
-    st.markdown("### Download Sample File")
+    
     sample_file = create_sample_file()
     st.download_button(label="Download Sample Excel File", data=sample_file, file_name='sample_data.xlsx', mime='application/vnd.openxmlformats-officedocument.spreadsheetml.sheet')
     
