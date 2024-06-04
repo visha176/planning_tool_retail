@@ -64,6 +64,18 @@ def add_custom_css():
     overflow: overlay;
     background: black;
 }
+.st-emotion-cache-12fmjuu {
+    position: unset !important;
+     Uncomment and adjust the following lines if you want to override other styles */
+    top: unset !important; 
+    left: unset !important; 
+    right: unset !important; 
+     height: unset !important; 
+    background: unset !important; 
+     outline: unset !important; 
+     z-index: unset !important; 
+     display: unset !important; 
+}
         </style>
         """,
         unsafe_allow_html=True
