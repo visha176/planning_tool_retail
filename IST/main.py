@@ -13,7 +13,7 @@ def add_custom_css():
         """
         <style>
         .st-emotion-cache-bm2z3a {
-            background-image: linear-gradient(to right top, #051937, #004d7a, #008793, #00bf72, #a8eb12);
+            background-image: linear-gradient(to left bottom, #010002, #201d2b, #303753, #375480, #2874ae);
         }
         .st-emotion-cache-13ln4jf {
             padding: 20px 1rem 1rem;
@@ -30,9 +30,9 @@ def add_custom_css():
             z-index: 1000 !important;
         }
         .stButton>button {
-            width: 100%;
+            width: 30%;
             margin: 5px 0;
-            background: linear-gradient(to right top, #051937, #004d7a, #008793, #00bf72, #a8eb12);
+           background-image: linear-gradient(to right top, #595b5e, #687579, #798f8c, #96a999, #c0c0a4);
             color: white;
             border: none;
             padding: 10px;
@@ -76,6 +76,27 @@ def add_custom_css():
      z-index: unset !important; 
      display: unset !important; 
 }
+h1 {
+    font-family: "Source Sans Pro", sans-serif;
+    font-weight: 700;
+    color: rgb(246 247 255);
+    padding: 6rem 0px 1rem;
+    margin: 0px;
+    line-height: 1.2;
+}
+p, ol, ul, dl {
+    margin: 0px 0px 1rem;
+    padding: 0px;
+    font-size: 1rem;
+    font-weight: 400;
+    color: white;
+}
+.st-emotion-cache-j6qv4b p {
+    word-break: break-word;
+    margin-bottom: 0px;
+    color: black;
+}
+
         </style>
         """,
         unsafe_allow_html=True
@@ -111,7 +132,7 @@ def handle_navigation():
                         "margin": "0px",
                         "--hover-color": "#eee",
                     },
-                    "nav-link-selected": {"background-color": "green"},
+                    "nav-link-selected": {"background-color": "#565458"},
                 }
             )
 
